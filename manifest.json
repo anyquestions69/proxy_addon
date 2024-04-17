@@ -1,12 +1,15 @@
 {
-    "name": "Image Grabber",
-    "description": "Extract all images from current web page",
-    "version": "1.0",
     "manifest_version": 3,
-    "icons": {},
-    "action": {
-        "default_popup":"popup.html"
-    },
-    "permissions": ["scripting", "activeTab"],
-    "background":{}
-}
+    "name": "proxy_addon",
+    "version": "1.0",
+  
+    "description": "Adds a red border to all webpages matching mozilla.org.",
+    "permissions": [
+        "webRequest",
+        "http://localhost*"
+      ],
+    "background": {
+        "scripts": ["proxy.js"]
+       }
+  }
+  
