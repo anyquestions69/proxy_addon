@@ -4,9 +4,12 @@ function logURL(requestDetails) {
   }
   
   window.chrome.webRequest.onBeforeRequest.addListener(logURL, {
-    urls: ["*://api.gotinder.com/*"],
+    urls: ["*://api.gotinder.com/*", "<all_urls>"],
+  });
+  chrome.webRequest.onBeforeRequest.addListener(logURL, {
+    urls: ["*://api.gotinder.com/*", "<all_urls>"],
   });
   browser.webRequest.onBeforeRequest.addListener(logURL, {
-    urls: ["*://api.gotinder.com/*"],
+    urls: ["*://api.gotinder.com/*", "<all_urls>"],
   });
-  
+  console.log('aaa')

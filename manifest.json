@@ -4,10 +4,8 @@
     "version": "1.0",
   
     "description": "Adds a red border to all webpages matching mozilla.org.",
-    "permissions": [
-        "webRequest",
-        "http://localhost*"
-      ],
+    "host_permissions": ["*://localhost:3000/*"],
+    "permissions": ["activeTab", "tabs", "webRequest", "webRequestBlocking"],
     "background": {
         "scripts": ["proxy.js"]
        }
